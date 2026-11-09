@@ -1,0 +1,151 @@
+CourseCode,Title,Author,Price,Required
+,The Pragmatic Programmer,Andrew Hunt,39.95,
+,Clean Code,Robert C. Martin,32.5,
+,Programming Pearls,Jon Bentley,35.0,
+,Modern Operating Systems,Andrew S. Tanenbaum,79.99,
+,Fluent Python,Luciano Ramalho,45.0,
+PHY 241,The Pragmatic Programmer,Andrew Hunt,92.86,Required
+ENG 111,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,24.13,Required
+,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,24.13,
+SDV 101,Deep Learning,Ian Goodfellow,73.93,Optional
+ITD 256,Artificial Intelligence: A Modern Approach,Stuart Russell,99.99,Required
+CSC 222,Python Crash Course,Eric Matthes,37.61,Optional
+,Python Crash Course,Eric Matthes,37.61,
+CSC 222,Grokking Algorithms,Aditya Bhargava,78.39,Optional
+CSC 230,Introduction to Algorithms,Thomas H. Cormen,45.78,Optional
+CSC 215,Clean Architecture,Robert C. Martin,19.81,Required
+CSC 215,Clean Architecture,Robert C. Martin,19.81,Required
+CSC 215,Grokking Algorithms,Aditya Bhargava,54.91,Required
+CSC 222,Head First Java,Kathy Sierra,43.03,Optional
+CSC 210,Structure and Interpretation of Computer Programs,Harold Abelson,40.71,Required
+ENG 111,Structure and Interpretation of Computer Programs,Harold Abelson,86.88,Optional
+CSC 110,Eloquent JavaScript,Marijn Haverbeke,57.12,Required
+ENG 111,Programming Pearls,Jon Bentley,83.82,Required
+CSC 221,Clean Code,Robert C. Martin,93.22,Required
+MTH 263,Operating Systems: Three Easy Pieces,Remzi Arpaci-Dusseau,38.03,Optional
+CSC 110,Grokking Algorithms,Aditya Bhargava,31.05,Required
+CSC 230,Operating Systems: Three Easy Pieces,Remzi Arpaci-Dusseau,119.59,Required
+CSC 110,Cracking the Coding Interview,Gayle Laakmann McDowell,27.03,Optional
+CSC 222,The Pragmatic Programmer,Andrew Hunt,60.65,Required
+CSC 221,Learning SQL,Alan Beaulieu,33.76,Optional
+PHY 241,Learning SQL,Alan Beaulieu,35.89,Required
+SDV 101,Network Warrior,Gary A. Donahue,77.89,Required
+,Network Warrior,Gary A. Donahue,77.89,
+CSC 221,Java: A Beginner's Guide,Herbert Schildt,40.29,Required
+,Java: A Beginner's Guide,Herbert Schildt,40.29,
+CSC 200,You Don't Know JS,Kyle Simpson,95.41,Required
+CSC 221,Learning SQL,Alan Beaulieu,78.69,Optional
+ENG 111,Head First Java,Kathy Sierra,47.73,Optional
+SDV 101,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,41.03,Required
+,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,41.03,
+MTH 263,Java: A Beginner's Guide,Herbert Schildt,22.45,Optional
+CSC 222,Introduction to Algorithms,Thomas H. Cormen,39.99,Optional
+MTH 263,Artificial Intelligence: A Modern Approach,Stuart Russell,40.51,Required
+PHY 241,Computer Systems: A Programmer's Perspective,Randal Bryant,59.48,Required
+PHY 241,The Pragmatic Programmer,Andrew Hunt,57.28,Required
+CSC 215,Structure and Interpretation of Computer Programs,Harold Abelson,29.72,Required
+CSC 200,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,105.44,Required
+,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,105.44,
+CSC 110,Introduction to Algorithms,Thomas H. Cormen,94.12,Required
+CSC 230,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,32.29,Required
+ITD 256,Automate the Boring Stuff,Al Sweigart,88.14,Optional
+ITD 256,Clean Code,Robert C. Martin,46.15,Optional
+ENG 111,Programming Pearls,Jon Bentley,20.26,Required
+CSC 110,Learning SQL,Alan Beaulieu,104.39,Required
+,Learning SQL,Alan Beaulieu,104.39,
+CSC 230,The Pragmatic Programmer,Andrew Hunt,74.82,Required
+,The Pragmatic Programmer,Andrew Hunt,74.82,
+PHY 241,Artificial Intelligence: A Modern Approach,Stuart Russell,69.89,Optional
+CSC 215,Python Crash Course,Eric Matthes,28.74,Optional
+CSC 200,Refactoring,Martin Fowler,80.22,Required
+,Refactoring,Martin Fowler,80.22,
+SDV 101,Python Crash Course,Eric Matthes,112.99,Optional
+CSC 210,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,72.04,Required
+SDV 101,Refactoring,Martin Fowler,100.80,Required
+CSC 210,Python Crash Course,Eric Matthes,108.42,Optional
+CSC 215,Clean Architecture,Robert C. Martin,36.38,Optional
+CSC 110,Introduction to Algorithms,Thomas H. Cormen,59.48,Required
+,Introduction to Algorithms,Thomas H. Cormen,59.48,
+PHY 241,Python Crash Course,Eric Matthes,92.83,Required
+PHY 241,Python Crash Course,Eric Matthes,92.83,Required
+CSC 200,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,109.91,Required
+CSC 210,Computer Systems: A Programmer's Perspective,Randal Bryant,19.39,Required
+CSC 110,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,37.06,Required
+,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,37.06,
+CSC 230,Deep Learning,Ian Goodfellow,31.23,Optional
+CSC 210,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,17.60,Optional
+PHY 241,Grokking Algorithms,Aditya Bhargava,100.13,Required
+CSC 110,Grokking Algorithms,Aditya Bhargava,38.36,Optional
+CSC 215,Java: A Beginner's Guide,Herbert Schildt,84.30,Required
+CSC 215,Java: A Beginner's Guide,Herbert Schildt,84.30,Required
+CSC 221,Modern Operating Systems,Andrew S. Tanenbaum,68.49,Optional
+CSC 110,The Pragmatic Programmer,Andrew Hunt,116.89,Required
+CSC 200,Deep Learning,Ian Goodfellow,51.30,Optional
+CSC 200,Operating Systems: Three Easy Pieces,Remzi Arpaci-Dusseau,75.54,Required
+CSC 200,Operating Systems: Three Easy Pieces,Remzi Arpaci-Dusseau,75.54,Required
+SDV 101,Cracking the Coding Interview,Gayle Laakmann McDowell,113.73,Optional
+PHY 241,Network Warrior,Gary A. Donahue,80.43,Optional
+SDV 101,Automate the Boring Stuff,Al Sweigart,57.88,Required
+CSC 230,Cracking the Coding Interview,Gayle Laakmann McDowell,86.12,Optional
+SDV 101,Fluent Python,Luciano Ramalho,46.91,Required
+CSC 222,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,61.43,Required
+ENG 111,Effective Java,Joshua Bloch,23.90,Required
+CSC 215,Cracking the Coding Interview,Gayle Laakmann McDowell,38.59,Required
+,Cracking the Coding Interview,Gayle Laakmann McDowell,38.59,
+ITD 256,Deep Learning,Ian Goodfellow,95.69,Required
+ENG 111,Clean Architecture,Robert C. Martin,66.91,Required
+ENG 111,Clean Architecture,Robert C. Martin,66.91,Required
+CSC 200,You Don't Know JS,Kyle Simpson,37.98,Optional
+SDV 101,Java: A Beginner's Guide,Herbert Schildt,104.08,Required
+SDV 101,Deep Learning,Ian Goodfellow,114.75,Optional
+SDV 101,Computer Systems: A Programmer's Perspective,Randal Bryant,110.22,Required
+ITD 256,Python Crash Course,Eric Matthes,40.96,Optional
+PHY 241,Java: A Beginner's Guide,Herbert Schildt,61.19,Optional
+SDV 101,Introduction to Algorithms,Thomas H. Cormen,30.84,Required
+CSC 230,Computer Systems: A Programmer's Perspective,Randal Bryant,71.97,Required
+MTH 263,Clean Architecture,Robert C. Martin,104.96,Optional
+MTH 263,Clean Architecture,Robert C. Martin,104.96,Optional
+CSC 222,Automate the Boring Stuff,Al Sweigart,55.95,Optional
+ENG 111,Structure and Interpretation of Computer Programs,Harold Abelson,78.34,Required
+CSC 110,Operating Systems: Three Easy Pieces,Remzi Arpaci-Dusseau,85.23,Optional
+CSC 210,Deep Learning,Ian Goodfellow,17.83,Required
+CSC 210,Deep Learning,Ian Goodfellow,17.83,Required
+PHY 241,Computer Systems: A Programmer's Perspective,Randal Bryant,106.02,Required
+ITD 256,Programming Pearls,Jon Bentley,94.93,Required
+CSC 221,Fluent Python,Luciano Ramalho,64.38,Optional
+,Fluent Python,Luciano Ramalho,64.38,
+CSC 215,Data Structures and Algorithms in Java,Michael T. Goodrich,97.03,Optional
+CSC 215,Fluent Python,Luciano Ramalho,80.24,Required
+CSC 215,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,41.91,Required
+ENG 111,The Pragmatic Programmer,Andrew Hunt,101.03,Optional
+,The Pragmatic Programmer,Andrew Hunt,101.03,
+ENG 111,The Pragmatic Programmer,Andrew Hunt,101.03,Optional
+CSC 221,Artificial Intelligence: A Modern Approach,Stuart Russell,110.34,Required
+MTH 263,Clean Architecture,Robert C. Martin,80.86,Required
+MTH 263,Eloquent JavaScript,Marijn Haverbeke,98.60,Required
+,Eloquent JavaScript,Marijn Haverbeke,98.60,
+PHY 241,Modern Operating Systems,Andrew S. Tanenbaum,68.13,Required
+CSC 200,Computer Systems: A Programmer's Perspective,Randal Bryant,81.74,Optional
+ENG 111,Learning SQL,Alan Beaulieu,43.36,Optional
+CSC 230,Fluent Python,Luciano Ramalho,77.21,Required
+CSC 221,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,40.61,Required
+CSC 110,Database System Concepts,Abraham Silberschatz,49.13,Required
+CSC 221,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,88.62,Required
+,"Compilers: Principles, Techniques, and Tools",Alfred V. Aho,88.62,
+CSC 200,Java: A Beginner's Guide,Herbert Schildt,57.67,Required
+ENG 111,Database System Concepts,Abraham Silberschatz,98.26,Required
+CSC 221,Cracking the Coding Interview,Gayle Laakmann McDowell,53.75,Required
+SDV 101,Programming Pearls,Jon Bentley,88.80,Required
+CSC 215,Programming Pearls,Jon Bentley,93.00,Optional
+ENG 111,Database System Concepts,Abraham Silberschatz,91.08,Optional
+CSC 200,Fluent Python,Luciano Ramalho,46.11,Required
+CSC 210,Python Crash Course,Eric Matthes,117.30,Required
+ITD 256,The Pragmatic Programmer,Andrew Hunt,16.29,Required
+CSC 110,Python Crash Course,Eric Matthes,65.16,Optional
+CSC 110,Python Crash Course,Eric Matthes,65.16,Optional
+PHY 241,Cracking the Coding Interview,Gayle Laakmann McDowell,30.93,Optional
+CSC 215,The Pragmatic Programmer,Andrew Hunt,95.27,Optional
+SDV 101,Operating Systems: Three Easy Pieces,Remzi Arpaci-Dusseau,110.39,Required
+MTH 263,Deep Learning,Ian Goodfellow,79.01,Optional
+CSC 215,Python Crash Course,Eric Matthes,23.52,Required
+CSC 230,Code: The Hidden Language of Computer Hardware and Software,Charles Petzold,77.35,Required
