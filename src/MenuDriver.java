@@ -328,27 +328,30 @@ public class MenuDriver {
             System.out.println("No textbook adoptions found.");
             return;
         }
+
+        // used the output format from saveAllBooksReport option 3
+        String fileSafe = code.toUpperCase();
         String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-        Path outPath = Paths.get(REPORTS_DIR, "all_books_report.txt");
+        Path outPath = Paths.get(REPORTS_DIR, "course_" + fileSafe + "_report.txt");
         try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(outPath))) {
-            out.printf("All Books Report  (%s)%n", ts);
+            out.printf("Course Report : %s (%s)%n", code.toUpperCase(), ts);
             out.println("---------------------------------------------------------------------------");
-            out.printf("%-30.30s %-22.22s %10s %-10.10s %-10.10s%n",
-                    "Title","Author","Price","Course","Tag");
+            out.printf("%-30.30s %-22.22s %10s %-10.10s%n",
+                    "Title","Author","Price","Tag");
             out.println("---------------------------------------------------------------------------");
-            double total = 0.0;
-            for (Books b : books) {
+            for (Books b : unique) {
                 String course = b.getCourseCode().isBlank() ? "—" : b.getCourseCode();
                 String tag = b.isRequired() ? "[Required]" :
                         (course.equals("—") ? "—" : "[Optional]");
-                out.printf("%-30.30s %-22.22s $%9.2f %-10.10s %-10.10s%n",
-                        b.getTitle(), b.getAuthor(), b.getPrice(), course, tag);
-                total += b.getPrice();
+                out.printf("%-30.30s %-22.22s $%9.2f %-10.10s%n",
+                        b.getTitle(), b.getAuthor(), b.getPrice(), tag);
             }
             out.println("---------------------------------------------------------------------------");
-            out.printf("Total books: %d%n", books.size());
-            out.printf("Grand total value: $%.2f%n", total);
-            System.out.println("Saved report: " + outPath.toString());
+            out.printf("Required subtotal: $%.2f%n", requiredTotal);
+            out.printf("Optional subtotal: $%.2f%n", optionalTotal);
+            out.printf("Grand total: $%.2f%n", requiredTotal + optionalTotal);
+            out.printf("(%d unique books; %d duplicates ignored)%n", unique.size(), dupCount);
+            System.out.println("Saved course report: " + outPath);
         } catch (IOException e) {
             System.out.println("Error writing " + outPath + ": " + e.getMessage());
         }

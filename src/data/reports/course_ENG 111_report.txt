@@ -1,0 +1,17 @@
+Course Report : ENG 111 (2026-11-09 23:11)
+---------------------------------------------------------------------------
+Title                          Author                      Price Tag       
+---------------------------------------------------------------------------
+Structure and Interpretation o Harold Abelson         $    86.88 [Optional]
+Programming Pearls             Jon Bentley            $    83.82 [Required]
+Head First Java                Kathy Sierra           $    47.73 [Optional]
+Effective Java                 Joshua Bloch           $    23.90 [Required]
+Clean Architecture             Robert C. Martin       $    66.91 [Required]
+The Pragmatic Programmer       Andrew Hunt            $   101.03 [Optional]
+Learning SQL                   Alan Beaulieu          $    43.36 [Optional]
+Database System Concepts       Abraham Silberschatz   $    98.26 [Required]
+---------------------------------------------------------------------------
+Required subtotal: $272.89
+Optional subtotal: $279.00
+Grand total: $551.89
+(8 unique books; 5 duplicates ignored)
