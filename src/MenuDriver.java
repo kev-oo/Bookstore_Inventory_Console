@@ -220,7 +220,7 @@ public class MenuDriver {
         System.out.println("-".repeat(90));
         for (Books b : books) {
             if (!b.getCourseCode().isBlank() &&
-                b.getCourseCode().toLowerCase(Locale.ROOT).equals(codeNorm)) {
+                    b.getCourseCode().toLowerCase(Locale.ROOT).equals(codeNorm)) {
                 String tag = b.isRequired() ? "[Required]" : "[Optional]";
                 System.out.printf("%-30.30s %-22.22s $%9.2f %-10.10s %-10.10s%n",
                         b.getTitle(), b.getAuthor(), b.getPrice(), b.getCourseCode(), tag);
@@ -287,6 +287,7 @@ public class MenuDriver {
             return;
         }
 
+        // the loop prompt is the same pattern as the readInt() method from starter code
         String code;
         while (true) {
             System.out.print("Enter your course code (e.g., CSC 222): ");
@@ -298,12 +299,35 @@ public class MenuDriver {
 
         }
 
+        //used the same format from the loadBooks() method from the starter code
         ArrayList<Books> unique = new ArrayList<>();
         int dupCount = 0;
         double requiredTotal = 0.0;
         double optionalTotal = 0.0;
 
         String codeNorm = code.toLowerCase(Locale.ROOT);
+// used format from searchByCourse, and the seenByTitleAuthor method
+        for (Books b : books) {
+            if (!b.getCourseCode().toLowerCase(Locale.ROOT).equals(codeNorm)) {
+                continue;
+            }
+            if (seenByTitleAuthor(unique, b)) {
+                dupCount++;
+                continue;
+            }
+            unique.add(b);
+            if (b.isRequired()){
+                requiredTotal += b.getPrice();
+            }else {
+                optionalTotal += b.getPrice();
+            }
+
+        }
+        // if there is no matches it will show this message, used the same as from the searchByCourse()
+        if (unique.isEmpty()) {
+            System.out.println("No textbook adoptions found.");
+            return;
+        }
         String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
         Path outPath = Paths.get(REPORTS_DIR, "all_books_report.txt");
         try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(outPath))) {
