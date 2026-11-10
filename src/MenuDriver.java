@@ -268,7 +268,6 @@ public class MenuDriver {
     }
 
     // ===== Option 4 (YOU implement): save COURSE report (list + totals) =====
-
     /**
      * TODO: Implement this method.
      * Requirements recap:
@@ -283,12 +282,52 @@ public class MenuDriver {
      *  - Print a friendly console message when done.
      */
     private static void saveCourseReport(ArrayList<Books> books, Scanner sc) {
-        // TODO: Your code here.
-        // HINTS:
-        //   • Normalize course with toLowerCase(Locale.ROOT) when comparing.
-        //   • Use an ArrayList<Books> "seen" and the helper seenByTitleAuthor(...) to avoid double-counting.
-        //   • Use String.format and printf for alignment similar to other reports.
-        //   • Build the output Path with Paths.get(REPORTS_DIR, "course_" + fileSafeCourse + "_report.txt")
+        if (books.isEmpty()) {
+            System.out.println("No data loaded.");
+            return;
+        }
+
+        String code;
+        while (true) {
+            System.out.print("Enter your course code (e.g., CSC 222): ");
+            code = sc.nextLine().trim();
+            if (!code.isEmpty()) {
+                break;
+            }
+            System.out.println("Course code cant be blank.");
+
+        }
+
+        ArrayList<Books> unique = new ArrayList<>();
+        int dupCount = 0;
+        double requiredTotal = 0.0;
+        double optionalTotal = 0.0;
+
+        String codeNorm = code.toLowerCase(Locale.ROOT);
+        String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+        Path outPath = Paths.get(REPORTS_DIR, "all_books_report.txt");
+        try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(outPath))) {
+            out.printf("All Books Report  (%s)%n", ts);
+            out.println("---------------------------------------------------------------------------");
+            out.printf("%-30.30s %-22.22s %10s %-10.10s %-10.10s%n",
+                    "Title","Author","Price","Course","Tag");
+            out.println("---------------------------------------------------------------------------");
+            double total = 0.0;
+            for (Books b : books) {
+                String course = b.getCourseCode().isBlank() ? "—" : b.getCourseCode();
+                String tag = b.isRequired() ? "[Required]" :
+                        (course.equals("—") ? "—" : "[Optional]");
+                out.printf("%-30.30s %-22.22s $%9.2f %-10.10s %-10.10s%n",
+                        b.getTitle(), b.getAuthor(), b.getPrice(), course, tag);
+                total += b.getPrice();
+            }
+            out.println("---------------------------------------------------------------------------");
+            out.printf("Total books: %d%n", books.size());
+            out.printf("Grand total value: $%.2f%n", total);
+            System.out.println("Saved report: " + outPath.toString());
+        } catch (IOException e) {
+            System.out.println("Error writing " + outPath + ": " + e.getMessage());
+        }
     }
 
     // ===== Option 5 (YOU implement): export TOP-N most expensive =====
