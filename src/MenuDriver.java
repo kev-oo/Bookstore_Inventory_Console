@@ -409,7 +409,7 @@ public class MenuDriver {
             total += sorted.get(i).getPrice();
         }
 
-        // write the report, using path from hint with the try PrintWriter
+        // writes the report, using path from hint with the try PrintWriter
         // using same format from the saveAllBooksReport, used file name from hints
         // using same loops for int, sorted.get that used for total
 
@@ -451,6 +451,51 @@ public class MenuDriver {
         //   • Collect prices into ArrayList<Double> and Collections.sort ascending.
         //   • Use printf or String.format("%.2f", value) for two decimals.
         //   • Path out = Paths.get(REPORTS_DIR, "price_stats.txt")
+
+        // used the same method from saveAllBooksReport to check if there is no data
+        if (books.isEmpty()) {
+            System.out.println("No data loaded");
+            return;
+        }
+        // Collects prices into ArrayList<Double> and Collections.sort ascending.
+        ArrayList<Double> prices = new ArrayList<>();
+        double total = 0.0;
+        for (Books b : books) {
+            prices.add(b.getPrice());
+            total += b.getPrice();
+        }
+        Collections.sort(prices);
+
+        //counts min,max,average sorted from min = first and max = last
+        int count = prices.size();
+        double min = prices.get(0);
+        double max = prices.get(count - 1);
+        double avg = total / count;
+
+        // median rule sorts the prices; for even count, average the middle two
+        // followed canvas order odd in middle, even is the average of the middle two
+        double median;
+        if (count % 2 == 1) {
+            median = prices.get(count / 2);
+        }
+        else {
+            median = (prices.get(count / 2 - 1) + prices.get(count / 2)) / 2;
+        }
+
+
+        // path from hints and the try/printwriter is the same from saveAllBooksReport
+        // used labels from the canvas output
+        Path outPath = Paths.get(REPORTS_DIR, "price_stats.txt");
+        try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(outPath))) {
+            out.printf("Count: %d%n", count);
+            out.printf("Min: $%.2f%n", min);
+            out.printf("Max: $%.2f%n", max);
+            out.printf("Average: $%.2f%n", avg);
+            out.printf("Median: $%.2f%n", median);
+            System.out.println("Saved: " + outPath);
+        } catch (IOException e) {
+            System.out.println("Error writing " + outPath + ": " + e.getMessage());
+        }
     }
 
     // ===== Helper you may reuse in case 4 (dedupe by Title + Author) =====
