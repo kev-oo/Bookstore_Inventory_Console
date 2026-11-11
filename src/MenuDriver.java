@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -377,6 +379,60 @@ public class MenuDriver {
         //   • new ArrayList<>(books) gives you a shallow copy to sort.
         //   • Comparator: (a, b) -> Double.compare(b.getPrice(), a.getPrice())
         //   • Path out = Paths.get(REPORTS_DIR, "top" + N + ".txt")
+
+        // used the same method from saveAllBooksReport to check if there is no data
+        if (books.isEmpty()) {
+            System.out.println("No data loaded");
+            return;
+        }
+
+        // using the readInt() method from the starter code to prompt for N and range check
+        // similar to the readInt but with range checks
+        int n;
+        while (true) {
+            n = readInt(sc, "Enter N (1-" + books.size() + "): ");
+            if (n >= 1 && n <= books.size()) {
+                break;
+            }
+            System.out.println("Enter a number from 1 to " + books.size() + ".");
+        }
+        // copying and sorting price descending using the ArrayList<>(books) and comparator from the hints
+        // sorts its highest price first with the Collections.sort from canvas constraints section
+
+        ArrayList<Books> sorted = new ArrayList<>(books);
+        Collections.sort(sorted, (a,b) -> Double.compare(b.getPrice(), a.getPrice()));
+
+        // adds the prices of the first N books but sorted
+
+        double total = 0.0;
+        for (int i = 0; i < n; i++) {
+            total += sorted.get(i).getPrice();
+        }
+
+        // write the report, using path from hint with the try PrintWriter
+        // using same format from the saveAllBooksReport, used file name from hints
+        // using same loops for int, sorted.get that used for total
+
+        String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+        Path outPath = Paths.get(REPORTS_DIR, "top" + n + ".txt");
+        try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(outPath))) {
+            // header from saveAllBooksReport
+            out.printf("Top %d Most Expensive  (%s)%n", n, ts);
+            out.println("---------------------------------------------------------------------------");
+            out.printf("    %-30.30s %-22.22s %10s%n","Title","Author","Price");
+            out.println("---------------------------------------------------------------------------");
+            for (int i = 0; i < n; i++) {
+                Books b = sorted.get(i);
+                out.printf("%2d. %-30.30s %-22.22s $%9.2f%n",
+                        i +1, b.getTitle(), b.getAuthor(), b.getPrice());
+            }
+            out.println("---------------------------------------------------------------------------");
+            out.printf("Top-N total value: $%.2f%n", total);
+            out.printf("Average of top N: $%.2f%n", total / n);
+            System.out.println("Saved: " + outPath);
+        } catch (IOException e) {
+            System.out.println("Error writing " + outPath + ": " + e.getMessage());
+        }
     }
 
     // ===== Option 6 (YOU implement): export PRICE STATS =====
