@@ -1,0 +1,17 @@
+Top 10 Most Expensive  (2026-11-11 15:53)
+---------------------------------------------------------------------------
+    Title                          Author                      Price
+---------------------------------------------------------------------------
+ 1. Operating Systems: Three Easy  Remzi Arpaci-Dusseau   $   119.59
+ 2. Python Crash Course            Eric Matthes           $   117.30
+ 3. The Pragmatic Programmer       Andrew Hunt            $   116.89
+ 4. Deep Learning                  Ian Goodfellow         $   114.75
+ 5. Cracking the Coding Interview  Gayle Laakmann McDowel $   113.73
+ 6. Python Crash Course            Eric Matthes           $   112.99
+ 7. Operating Systems: Three Easy  Remzi Arpaci-Dusseau   $   110.39
+ 8. Artificial Intelligence: A Mod Stuart Russell         $   110.34
+ 9. Computer Systems: A Programmer Randal Bryant          $   110.22
+10. Python Crash Course            Eric Matthes           $   108.42
+---------------------------------------------------------------------------
+Top-N total value: $1134.62
+Average of top N: $113.46

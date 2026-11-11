@@ -1,0 +1,16 @@
+Course Report : CSC 222 (2026-11-11 15:50)
+---------------------------------------------------------------------------
+Title                          Author                      Price Tag       
+---------------------------------------------------------------------------
+Python Crash Course            Eric Matthes           $    37.61 [Optional]
+Grokking Algorithms            Aditya Bhargava        $    78.39 [Optional]
+Head First Java                Kathy Sierra           $    43.03 [Optional]
+The Pragmatic Programmer       Andrew Hunt            $    60.65 [Required]
+Introduction to Algorithms     Thomas H. Cormen       $    39.99 [Optional]
+Code: The Hidden Language of C Charles Petzold        $    61.43 [Required]
+Automate the Boring Stuff      Al Sweigart            $    55.95 [Optional]
+---------------------------------------------------------------------------
+Required subtotal: $122.08
+Optional subtotal: $254.97
+Grand total: $377.05
+(7 unique books; 0 duplicates ignored)

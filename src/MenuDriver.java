@@ -100,9 +100,9 @@ public class MenuDriver {
         System.out.println("1) List all books");
         System.out.println("2) Search by course");
         System.out.println("3) Save ALL BOOKS report");
-        System.out.println("4) Save COURSE report (list + totals)   <-- YOU implement");
-        System.out.println("5) Export TOP-N most expensive          <-- YOU implement");
-        System.out.println("6) Export PRICE STATS (min/max/avg/median) <-- YOU implement");
+        System.out.println("4) Save COURSE report (list + totals)");
+        System.out.println("5) Export TOP-N most expensive");
+        System.out.println("6) Export PRICE STATS (min/max/avg/median)");
         System.out.println("0) Exit");
     }
 
@@ -292,7 +292,7 @@ public class MenuDriver {
         // the loop prompt is the same pattern as the readInt() method from starter code
         String code;
         while (true) {
-            System.out.print("Enter your course code (e.g., CSC 222): ");
+            System.out.print("Enter course code (e.g., CSC 222): ");
             code = sc.nextLine().trim();
             if (!code.isEmpty()) {
                 break;
@@ -334,7 +334,7 @@ public class MenuDriver {
         // used the output format from saveAllBooksReport option 3
         String fileSafe = code.toUpperCase();
         String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-        Path outPath = Paths.get(REPORTS_DIR, "course_" + fileSafe + "_report.txt");
+        Path outPath = Paths.get(REPORTS_DIR, "course_" + fileSafe.replace(" ", "") + "_report.txt");
         try (PrintWriter out = new PrintWriter(Files.newBufferedWriter(outPath))) {
             out.printf("Course Report : %s (%s)%n", code.toUpperCase(), ts);
             out.println("---------------------------------------------------------------------------");
@@ -353,7 +353,7 @@ public class MenuDriver {
             out.printf("Optional subtotal: $%.2f%n", optionalTotal);
             out.printf("Grand total: $%.2f%n", requiredTotal + optionalTotal);
             out.printf("(%d unique books; %d duplicates ignored)%n", unique.size(), dupCount);
-            System.out.println("Saved course report: " + outPath);
+            System.out.println("Saved course report: " + outPath + " (" + unique.size() + " unique: " + dupCount + " duplicates ignored)");
         } catch (IOException e) {
             System.out.println("Error writing " + outPath + ": " + e.getMessage());
         }
